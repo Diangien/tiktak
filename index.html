@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tik Tak Toe</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Tik Tak Toe</h1>
+    </header>
+    <main>
+        <div id="escolha-container">
+            <h2>Escolha uma opcao</h2>
+            <div id="escolha-content">
+                <div class="escolha-item">
+                    <input type="checkbox" name="iescolha" id="amigo">
+                    <img src="" alt="">
+                </div>
+
+                <div class="escolha-item">
+                    <input type="checkbox" name="iescolha" id="computador">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="jogo-container">
+
+            <div id="riscas-conatiner">
+                <div class="risca">
+                    <div class="risca-item vertical"></div>
+                </div>
+
+                <div class="risca">
+                    <div class="risca-item vertical"></div>
+                </div>
+
+                <div class="risca">
+                    <div class="risca-item vertical"></div>
+                </div>
+
+                <div class="risca">
+                    <div class="risca-item horizontal"></div>
+                </div>
+
+                <div class="risca">
+                    <div class="risca-item horizontal"></div>
+                </div>
+
+                <div class="risca">
+                    <div class="risca-item horizontal"></div>
+                </div>
+
+                <div class="risca">
+                    <div class="risca-item diagonal-principal"></div>
+                </div>
+
+                <div class="risca">
+                    <div class="risca-item diagonal-secindaria"></div>
+                </div>
+            </div>
+
+            <div id="divisorias-container">
+                <div class="divisoria" class="vertical"></div>
+                <div class="divisoria" class="vertical"></div>
+                <div class="divisoria" class="horizontal"></div>
+                <div class="divisoria" class="horizontal"></div>
+            </div>
+            <div class="quadros-container">
+                <div class="quadro" id="quadro1">1</div>
+                <div class="quadro" id="quadro2">2</div>
+                <div class="quadro" id="quadro3">3</div>
+                <div class="quadro" id="quadro4">4</div>
+                <div class="quadro" id="quadro5">5</div>
+                <div class="quadro" id="quadro6">6</div>
+                <div class="quadro" id="quadro7">7</div>
+                <div class="quadro" id="quadro8">8</div>
+                <div class="quadro" id="quadro9">9</div>
+            </div>
+        </div>
+
+        <fieldset id="pontos-container">
+            <legend>Pontos</legend>
+            <div class="pontos">
+                <p id="jogador1">Jogador-1</p>
+            </div>
+    
+            <div class="pontos">
+                <p class="joador2">jogador-2</p>
+            </div>
+        </fieldset>
+        
+
+    </main>
+
+    <footer>
+        <div id="desc">
+            <p>Desenvolvido por </p>
+            <div>
+                <p id="logo-diang">Diang</p>
+                <p id="logo-games">Games</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
