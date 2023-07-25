@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tik Tak Toe</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="imagens/tic-tac-toe.ico" type="image/x-icon">
+    
 </head>
 <body>
     <header>
@@ -12,16 +14,21 @@
     </header>
     <main>
         <div id="escolha-container">
-            <h2>Escolha uma opcao</h2>
-            <div id="escolha-content">
-                <div class="escolha-item">
-                    <input type="checkbox" name="iescolha" id="amigo">
-                    <img src="" alt="">
-                </div>
-
-                <div class="escolha-item">
-                    <input type="checkbox" name="iescolha" id="computador">
-                    <img src="" alt="">
+            <div id="escolha-sub-container">
+                <h2>Escolha uma opção</h2>
+                <div id="escolha-content">
+                    <div class="escolha-item">
+                        <input type="radio" name="iescolha" id="amigo" class="radio">
+                        <label class="imagens" for="amigo">
+                            <img src="imagens/pessoa.png" alt="">
+                            <img src="imagens/x.png" alt="">
+                            <img src="imagens/pessoa.png" alt="">
+                        </label>
+                    </div>
+                    <div class="escolha-item">
+                        <input type="radio" name="iescolha" id="computador" class="radio">
+                        <label for="computador"><img src="imagens/pc.png" alt=""></label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,8 +104,8 @@
 
     <footer>
         <div id="desc">
-            <p>Desenvolvido por </p>
-            <div>
+            <p>Desenvolvido por</p>
+            <div id="logos">
                 <p id="logo-diang">Diang</p>
                 <p id="logo-games">Games</p>
             </div>
