@@ -79,113 +79,21 @@ main #escolha-sub-container{
 
 /*-----Inicio- Jogo */
 
-
-/* --------> Riscas */
-.risca{
-    width: 5px;
-    height: 50px;
-    background-color: black;
-    margin-bottom:10px;
-    
-}
-
-.horizontal{
-    width: 200px;
-    height: 5px;
-}
-
-.vertical{
-    width: 5px;
-    height: 200px;
-    transform: rotate(0deg);
-}
-
-.diagonal-principal{
-    transform: rotate(-60deg);
-}
-.diagonal-secundaria{
-    transform: rotate(60deg);
-}
-
-#riscas-container{
-    position:relative;
-    display: none;
-}
-
-/* --------> Riscas- FIM*/
-
-/* --------> Divisorias- INICIO*/
-
-.horizontal{
-    width: 350px;
-    height: 5px;
-}
-
-.vertical{
-    width: 5px;
-    height: 350px;
-    transform: rotate(0deg);
-}
-
-/* Fim-Jogo */
-
-#divisorias-container{
-    position:relative;
-    margin:3% auto;
-    width: 150px;
-    height: 400px;
-}
-
-.divisoria{
-    background-color:black;
-    border-radius: 10px;
-    margin-bottom:10px;
-}
-
-.aux{
-    display: flex;
-}
-
-
-#verticais-container{
-    display: flex;
-    width: 150px;
-    justify-content: space-between;
-    height: 200px;
-}
-
-#horizontais-container{
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    height: 150px;
-    justify-content: space-between;
-    margin-left: -100px;
-    margin-top:-100px;
-}
-
 /* Quadros: INICIO */
 
 #quadros-container{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-areas: "l1 l2 l3"
-                         "l4 l5 l6"
-                         "l7 l8 l9";
-   justify-content: center;
-   top: -430px;
-   column-gap: 30px;
-   row-gap: 20px;
+    
+   display:grid;
+   width: 100%;
+   height: 100%;
+   
 }
 
 .quadro{
-    width: 100px;
-    height: 100px;
+    width: 20%;
+    height: 20%;
     background-color: pink;
-    margin-top: 10px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,7 +129,7 @@ footer #desc div{
 
 #logo-diang{
     display: inline-block;
-    height: 40px;
+    height: auto;
     background-color: var(--meu-azul);
     color: darkblue;
 }
