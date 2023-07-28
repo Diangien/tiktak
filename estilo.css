@@ -21,18 +21,21 @@ header{
     display: flex;
     justify-content:center;
     align-items:center;
-    font-size:1.5em;
     box-shadow:1px 1px 5px rgba(0, 0, 0, 0.356);
+}
+
+header h1{
+    font-size:5vh;
 }
 
 /* Inicio Main */
 main{
     background-color:yellow;
-    width:var(--main);
+    width:80%;
     margin:0 auto;
     margin-top:.5%;
     border-radius:10px;
-    
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.459);
 }
 
 /* Inicio divs das escolhas */
@@ -85,20 +88,27 @@ main #escolha-sub-container{
     
    display:grid;
    width: 100%;
-   height: 100%;
+   height: 250%;
+   grid-template-areas: "l1 l2 l3"
+                        "l4 l5 l6"
+                        "l7 l8 l9";
+    justify-content:center;
+    align-items:baseline;
+    gap:1.5%;
    
 }
 
 .quadro{
-    width: 20%;
-    height: 20%;
+    width: 100px;
+    height: 100px;
     background-color: pink;
-    
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3em;
     border-radius: 10px;
+    cursor:pointer;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.342);
 }
 
 
@@ -114,7 +124,8 @@ footer{
     justify-content: center;
     align-items: center;
     font-size: 1.4em;
-    height: 200px;
+    height: 20%;
+    margin-top:1.5%
 }
 
 footer #desc{
@@ -138,4 +149,29 @@ footer #desc div{
     color: var(--meu-azul)
 }
 
+/* Pontos */
 
+#pontos-container{
+    margin-top:2%;
+    width: 70%;
+    margin-left:5%;
+    border: 5px solid blue;
+    font-size:1.4em;
+    border-radius: 6px;
+    padding:1.5%;
+    
+}
+
+legend{
+    font-weight: bold;
+    padding:2%;
+}
+.pontos{
+    display:flex;
+    gap:10%;
+}
+
+/* 
+
+
+*/

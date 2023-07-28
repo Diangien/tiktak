@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tik Tak Toe</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css" media="all">
     <link rel="shortcut icon" href="imagens/tic-tac-toe.ico" type="image/x-icon">
+    <link rel="stylesheet" href="celular.css" media="all and (max-width:768px)">
     
 </head>
 <body>
@@ -21,8 +22,7 @@
                         <input type="radio" name="iescolha" id="amigo" class="radio">
                         <label class="imagens" for="amigo">
                             <img src="imagens/pessoa.png" alt="">
-                            <img src="imagens/x.png" alt="">
-                            <img src="imagens/pessoa.png" alt="">
+                            
                         </label>
                     </div>
                     <div class="escolha-item">
@@ -50,14 +50,16 @@
         <fieldset id="pontos-container">
             <legend>Pontos</legend>
             <div class="pontos">
-                <p id="jogador1">Jogador-1</p>
+                <p>Jogador 1: </p>
+                <p class="ponto" id="ponto-jogador-1">0</p>
             </div>
     
             <div class="pontos">
-                <p class="joador2">jogador-2</p>
+                <p>jogador 2: </p>
+                <p class="ponto" id="ponto-jogador-2">0</p>
             </div>
         </fieldset>
-        
+        <br>
 
     </main>
 
