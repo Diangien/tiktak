@@ -11,7 +11,7 @@
 }
 
 body{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -99,8 +99,8 @@ main #escolha-sub-container{
 }
 
 .quadro{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     background-color: pink;
     display: flex;
     justify-content: center;
@@ -124,7 +124,7 @@ footer{
     justify-content: center;
     align-items: center;
     font-size: 1.4em;
-    height: 20%;
+    height: 25%;
     margin-top:1.5%
 }
 
@@ -153,10 +153,10 @@ footer #desc div{
 
 #pontos-container{
     margin-top:2%;
-    width: 70%;
-    margin-left:5%;
+    width: 40%;
+    margin-left:10%;
     border: 5px solid blue;
-    font-size:1.4em;
+    font-size:1.7em;
     border-radius: 6px;
     padding:1.5%;
     
