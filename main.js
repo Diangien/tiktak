@@ -22,27 +22,7 @@ let btn_clicados =[], matriz=[],l1=[],l2=[],l3=[]
 
 let random = (inicio,fim)=> (Math.random() * fim + 1) + inicio
 
-let tempo = setInterval(()=>{
-    switch(verifica()){
-        case "X":
-            alert('X ganhou')
-            clearInterval(tempo)
-            break
-        case "X":
-            alert('O ganhou')
-            clearInterval(tempo)
-            break
-        case -1:
-            alert('Empate')
-            clearInterval(tempo)
-            break
-        default:
-            clearInterval(tempo)
-            break;
 
-        
-    }
-},100)
 
 btns.map((element)=>{
     
@@ -79,11 +59,6 @@ num = (texto)=>{
     }
 }
 
-
-
-
-
-
 let verifica = ()=>{
     matriz = [[num(btns[0]),num(btns[1]),num(btns[2])],[num(btns[3]),num(btns[4]),num(btns[5])],[num(btns[6]),num(btns[7]),num(btns[8])]]
 
@@ -112,15 +87,37 @@ let verifica = ()=>{
         }
     }
 
-    if(sl1==6|| sl2==6||sl3==6||sc1==6||sc2==6||sc3==6||sdp==6){
+    // if(sl1==6|| sl2==6||sl3==6||sc1==6||sc2==6||sc3==6||sdp==6){
+    //     return "X"
+    // }else if(sl1==15|| sl2==15||sl3==15||sc1==15||sc2==15||sc3==15||sdp==15){
+    //     return "O"
+    // }else{
+    //     return "1"
+    // }
+
+    if(btns[0].textContent=="X"){
         return "X"
-    }else if(sl1==15|| sl2==15||sl3==15||sc1==15||sc2==15||sc3==15||sdp==15){
-        return "O"
     }else{
-        return -1
+        return "33"
     }
 }
 
+let tempo = setInterval(()=>{
+
+    if(verifica() == "X"){
+        alert('X ganhou')
+        clearInterval(tempo)
+    }else if(verifica() == "O"){
+        alert('O ganhou')
+            clearInterval(tempo)
+    }else if(verifica() == "1"){
+            alert('Empate')
+            clearInterval(tempo)
+    }
+   
+        
+    }
+,1*60*1000)
 
 
 
