@@ -182,6 +182,29 @@ legend{
     gap:10%;
 }
 
+#div-controls{
+    display:flex;
+    gap:10%
+}
+
+.novo-jogo-button{
+    width: 30%;
+    font-size: 2em;
+    align-self: center;
+    background-color: #074866;
+    padding:3%;
+    text-align: center;
+    color:#fff;
+    border-radius: 10px;
+    height: 100%;
+    transition-duration:.5s;
+    cursor:pointer;
+}
+
+.novo-jogo-button:hover{
+    transform:scale(1.1)
+}
+
 /* 
 
 

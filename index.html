@@ -19,14 +19,14 @@
                 <h2>Escolha uma opção</h2>
                 <div id="escolha-content">
                     <div class="escolha-item">
-                        <input type="radio" name="iescolha" id="amigo" class="radio" checked onchange="novo_jogo('pc')">
+                        <input type="radio" name="iescolha" id="amigo" class="radio" checked onchange="novo_jogo('amigo');amigo_click()">
                         <label class="imagens" for="amigo" >
                             <img src="imagens/pessoa.png" alt="">
                             
                         </label>
                     </div>
                     <div class="escolha-item">
-                        <input type="radio" name="iescolha" id="computador" class="radio">
+                        <input type="radio" name="iescolha" id="computador" class="radio" onchange="novo_jogo('pc');pc_click()">
                         <label for="computador"><img src="imagens/pc.png" alt=""></label>
                     </div>
                 </div>
@@ -47,21 +47,26 @@
             </div>
         </div>
 
-        <fieldset id="pontos-container">
-            <legend>Pontos</legend>
-            <div class="pontos">
-                <p>Jogador 1: </p>
-                <p class="ponto" id="ponto-jogador-1">0</p>
+        <div id="div-controls">
+            <fieldset id="pontos-container">
+                <legend>Pontos</legend>
+                <div class="pontos">
+                    <p>Jogador 1: </p>
+                    <p class="ponto" id="ponto-jogador-1">0</p>
+                </div>
+                <div class="pontos">
+                    <p>jogador 2: </p>
+                    <p class="ponto" id="ponto-jogador-2">0</p>
+                </div>
+            </fieldset>
+
+            <div class="novo-jogo-button" id="novo-jogo-button">
+                Novo Jogo
             </div>
-    
-            <div class="pontos">
-                <p>jogador 2: </p>
-                <p class="ponto" id="ponto-jogador-2">0</p>
-            </div>
-        </fieldset>
+        </div>
         <br>
 
-        <button>Checar</button>
+        <button onclick="clic()">Checar</button>
     </main>
 
     <footer>
