@@ -120,5 +120,5 @@ let verifica = ()=>{
 
 novo_jogo(opcao)
 
-alert(sl1)
+
 
