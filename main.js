@@ -4,7 +4,7 @@ let opcao = ''
 let sl1=0,sl2=0,sl3=0,sc1=0,sc2=0,sc3=0,sdp=0,sds=0
 const x = 'X'
 const o = 'O'
-let clicou=false
+let clicou=false,game_over=false
 let vez=0
 if(amigo_opt.checked == true){
     opcao = 'amigo'
@@ -17,36 +17,38 @@ btns = [...btns]
 let btn_clicados =[], matriz=[],l1=[],l2=[],l3=[]
 
 
+//novo jogo
 
+novo_jogo = function(escolha){
+    btns.map((element)=>{
+   
+        element.addEventListener('click',(evt)=>{
+        let quadro = evt.target
+           if(opcao=='amigo'){
+                if(btn_clicados.includes(quadro)){
+                    return     
+                }
+                if(vez == 0){
+                    quadro.textContent = converter_vez(vez)
+                    quadro.style.color = 'red'
+                    vez = 1
+                }else{
+                    quadro.textContent = converter_vez(vez)
+                    quadro.style.color = 'blue'
+                    vez = 0
+                }
+                btn_clicados.push(quadro)
+           }else{
+    
+           }
+        })
+    })
+}
 //Gerar Numeros aleatorios
 
 let random = (inicio,fim)=> (Math.random() * fim + 1) + inicio
 
 
-
-btns.map((element)=>{
-    
-    element.addEventListener('click',(evt)=>{
-    let quadro = evt.target
-       if(opcao=='amigo'){
-            if(btn_clicados.includes(quadro)){
-                return     
-            }
-            if(vez == 0){
-                quadro.textContent = converter_vez(vez)
-                quadro.style.color = 'red'
-                vez = 1
-            }else{
-                quadro.textContent = converter_vez(vez)
-                quadro.style.color = 'blue'
-                vez = 0
-            }
-            btn_clicados.push(quadro)
-       }else{
-
-       }
-    })
-})
 
 converter_vez = (vez) => vez == 0?'X':'O'
 num = (texto)=>{
@@ -87,40 +89,36 @@ let verifica = ()=>{
         }
     }
 
-    // if(sl1==6|| sl2==6||sl3==6||sc1==6||sc2==6||sc3==6||sdp==6){
-    //     return "X"
-    // }else if(sl1==15|| sl2==15||sl3==15||sc1==15||sc2==15||sc3==15||sdp==15){
-    //     return "O"
-    // }else{
-    //     return "1"
-    // }
+     if(sl1==6|| sl2==6||sl3==6||sc1==6||sc2==6||sc3==6||sdp==6){
+         return "X"
+     }else if(sl1==15|| sl2==15||sl3==15||sc1==15||sc2==15||sc3==15||sdp==15){
+         return "O"
+     }else{
+         return "1"
+     }
 
-    if(btns[0].textContent=="X"){
-        return "X"
-    }else{
-        return "33"
-    }
+    
 }
 
-let tempo = setInterval(()=>{
+//  let tempo = setInterval(()=>{
 
-    if(verifica() == "X"){
-        alert('X ganhou')
-        clearInterval(tempo)
-    }else if(verifica() == "O"){
-        alert('O ganhou')
-            clearInterval(tempo)
-    }else if(verifica() == "1"){
-            alert('Empate')
-            clearInterval(tempo)
-    }
+//      if(verifica() == "X"){
+//          alert('X ganhou')
+//          clearInterval(tempo)
+//      }else if(verifica() == "O"){
+//          alert('O ganhou')
+//              clearInterval(tempo)
+//      }else if(verifica() == "1"){
+//              alert('Empate')
+//              clearInterval(tempo)
+//      }
    
         
-    }
-,1*60*1000)
+//      }
+//  ,1*60*1000)
 
 
+novo_jogo(opcao)
 
-
-
+alert(sl1)
 

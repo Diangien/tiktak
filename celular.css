@@ -1,12 +1,19 @@
 .quadro{
-    width: 75px;
-    height: 75px;
+    width: 85px;
+    height: 85px;
+    background-color: #fff;
+    color:#082a3a
 }
 
 main{
     width: 100%;
+    background-image: linear-gradient(45deg,#00e6f6,#1f6cab);
 }
 
 #pontos-container{
     width: 80%;
+}
+
+.jogo-container{
+    padding: 50px;
 }
