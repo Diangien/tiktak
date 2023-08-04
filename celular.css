@@ -2,7 +2,8 @@
     width: 85px;
     height: 85px;
     background-color: #fff;
-    color:#082a3a
+    color:#082a3a;
+    
 }
 
 main{
@@ -17,3 +18,4 @@ main{
 .jogo-container{
     padding: 50px;
 }
+

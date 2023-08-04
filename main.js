@@ -12,6 +12,7 @@ let ponto_x=0,ponto_o=0
 let vez=0
 let btns = document.getElementsByClassName('btn')
 btns = [...btns]
+let botoes_vencedores=[]
 
 let btn_clicados =[], matriz=[],l1=[],l2=[],l3=[]
 
@@ -92,6 +93,9 @@ let verifica = ()=>{
     })
 
      if(sl1==3|| sl2==3||sl3==3||sc1==3||sc2==3||sc3==3||sdp==3||sds==3){
+        if(sl1==3){
+            pintar('sl1')
+        }
          return "X"
      }else if(sl1==6|| sl2==6||sl3==6||sc1==6||sc2==6||sc3==6||sdp==6||sds==6){
          return "O"
@@ -176,3 +180,7 @@ btn_novo.addEventListener('click',()=>{
 })
 
 novo_jogo('amigo')
+
+pintar = (lado)=>{
+   btns[0].style.backgroundColor='blue'
+}

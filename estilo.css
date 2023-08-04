@@ -120,6 +120,9 @@ main #escolha-sub-container{
     border-radius: 10px;
     cursor:pointer;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.342);
+    transition:all .2s;
+    animation: pintar 1s ease infinite;
+    animation-play-state: paused;
 }
 
 
@@ -209,3 +212,17 @@ legend{
 
 
 */
+
+@keyframes pintar{
+    0%{
+    }
+
+    50%{
+        background-color: #00e6f6;
+        box-shadow: 2px 2px 20px rgba(0, 68, 255, 0.651);
+    }
+
+    100%{
+        background-color: #082a3a;
+    }
+}
