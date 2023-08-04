@@ -22,6 +22,7 @@ pc_click = ()=> opcao = 'pc'
 
 
 renovar = function(){
+    matriz=[]
     vez=0
     btns.map((el)=>{
         el.style.color = '#fff';
@@ -38,37 +39,57 @@ let verifica = ()=>{
               [num(btns[3].textContent),num(btns[4].textContent),num(btns[5].textContent)],
               [num(btns[6].textContent),num(btns[7].textContent),num(btns[8].textContent)]]
 
-    sl1 = sl2 = sl3 = sc1 = sc2 = sc3 = sdp = sds = 0;
-    for(let i=0;i<3;i++){
-        for(let j=0;j<3;j++){
+    sl1 = 0
+    sl2 = 0
+    sl3 = 0
+    sc1 = 0
+    sc2 = 0
+    sc3 = 0
+    sdp = 0
+    sds = 0
+    // for(let i=0;i<3;i++){
+    //     for(let j=0;j<3;j++){
+    //         if(i==0){
+    //             sl1 = matriz[0][0]+ matriz[0][1] + matriz[0][2]
+    //             alert('snsns')
+    //         }
+    //         else if(i==1){
+    //             sl2 = matriz[i][0]+ matriz[i][1] + matriz[i][2]
+    //             alert(sl2)
+    //         }else if(i==2){
+    //             sl3 = matriz[2][0]+ matriz[2][1] + matriz[2][2]
+    //         }
+
+    //         
+
+    //         
+            
+    //     }
+    // }
+
+    matriz.map((linhas,i)=>{
+        linhas.map((colunas,j)=>{
             if(i==0){
-                sl1 = matriz[0][0]+ matriz[0][1] + matriz[0][2]
-            }
-            if(i==2){
-                sl2 = matriz[i][0]+ matriz[i][1] + matriz[i][2]
-            }else if(i==3){
-                sl3 = matriz[i][0]+ matriz[i][1] + matriz[i][2]
+                sl1+=matriz[0][j]
+            }else if(i==1){
+                sl2+=matriz[1][j]
+            }else if(i==2){
+                sl3 += matriz[2][j]
             }
 
             if(j==0){
-                sc1 += matriz[i][0]
-            }else if(j==2){
-                sc2 += matriz[i][1]  
-            }else if(j==3){
-                sc3 += matriz[i][2]      
-           }
+              sc1 += matriz[i][0]
+            }else if(j==1){
+              sc2 += matriz[i][1]  
+             }else if(j==2){
+              sc3 += matriz[i][2]      
+            }
 
             if(i==j){
                 sdp += matriz[i][j]
             }
-
-            if(j == Math.Abs(i - 2))
-            {
-                 sds += quadro[i][Math.Abs(i - 2)];
-            }
-            
-        }
-    }
+        })
+    })
 
      if(sl1==3|| sl2==3||sl3==3||sc1==3||sc2==3||sc3==3||sdp==3||sds==3){
          return "X"
@@ -85,7 +106,7 @@ let verifica = ()=>{
 
 
 
-novo_jogo = function(escolha='amigo'){
+novo_jogo = function(escolha){
     renovar()
     btns.map((element)=>{
         element.addEventListener('click',(evt)=>{
@@ -111,14 +132,13 @@ novo_jogo = function(escolha='amigo'){
            if(verifica()== 'X'){
                 alert('X ganhou')
                 ponto_x++
-                ganhar('x')
+                ponto_x_document.innerHTML = ponto_x
            }else if(verifica()=='O'){
                 alert('O ganhou')
                 ponto_o++
-                ganhar('o')
+                ponto_o_document.innerHTML = ponto_o
            }else if(verifica()=='-1'){
                 alert('Empate!')
-    
            }
         })
     })
@@ -147,7 +167,8 @@ empate = ()=>{
 }
 
 clic = ()=>{
-    alert(sl2)
+    alert(matriz)
+    alert(`${sl1}--${sl2}--${sl3}\n${sc1}--${sc2}--${sc3}`)
 }
 
 btn_novo.addEventListener('click',()=>{
@@ -155,7 +176,3 @@ btn_novo.addEventListener('click',()=>{
 })
 
 novo_jogo('amigo')
-
-
-
-
